@@ -39,20 +39,19 @@ export default function MinimalHome() {
             </div>
           </div>
 
-          <div className="col-span-12 lg:col-span-5 grid grid-cols-2 gap-3">
-            {homePhotos.map((p, i) => (
-              <div
-                key={p}
-                className={`overflow-hidden rounded-2xl bg-[#e8e3d5] aspect-[4/3] flex items-center justify-center ${i === 1 ? 'translate-y-6' : ''} ${i === 2 ? '-translate-y-2' : ''} ${i === 3 ? 'translate-y-4' : ''}`}
-              >
+          <div className="col-span-12 lg:col-span-5">
+            <div className="overflow-hidden rounded-2xl bg-[#e8e3d5] mx-auto max-w-[667px] shadow-[0_18px_40px_-24px_rgba(42,42,38,0.35)]">
+              <div className="grid grid-cols-[351fr_316fr] gap-0">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
-                  src={photo(p)}
-                  alt={`Schaufenster ${i + 1}`}
-                  className="max-w-full max-h-full pixel-img"
-                />
+                <img src={photo('home_01.gif')} alt="Schaufenster oben links" className="w-full h-auto block pixel-img" />
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img src={photo('home_02.gif')} alt="Schaufenster oben rechts" className="w-full h-auto block pixel-img" />
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img src={photo('home_03.gif')} alt="Schaufenster unten links" className="w-full h-auto block pixel-img" />
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img src={photo('home_04_neu.gif')} alt="Schaufenster unten rechts" className="w-full h-auto block pixel-img" />
               </div>
-            ))}
+            </div>
           </div>
         </div>
       </section>

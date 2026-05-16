@@ -142,13 +142,24 @@ export default function MinimalSection({ params }: { params: { slug: string } })
                 </a>
               </div>
             </div>
-            <div className="rounded-2xl overflow-hidden bg-[#eef0e6]">
-              <iframe
-                title="Karte"
-                src="https://www.openstreetmap.org/export/embed.html?bbox=8.5780%2C49.1438%2C8.6020%2C49.1538&amp;layer=mapnik&amp;marker=49.1488%2C8.5900"
-                className="w-full aspect-[5/4] block"
-                loading="lazy"
-              />
+            <div className="space-y-2">
+              <div className="rounded-2xl overflow-hidden bg-[#eef0e6]">
+                <iframe
+                  title="Karte"
+                  src="https://maps.google.com/maps?q=Blumen+Gr%C3%B6hb%C3%BChl%2C+Weingartener+Stra%C3%9Fe+27%2C+76646+Bruchsal&output=embed"
+                  className="w-full aspect-[5/4] block"
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                />
+              </div>
+              <a
+                href="https://maps.app.goo.gl/jnsBKqTRD29CBzGw6"
+                target="_blank"
+                rel="noopener"
+                className="inline-flex items-center gap-1 text-[13px] text-[#5b6f54] hover:text-[#2a2a26]"
+              >
+                In Google Maps öffnen →
+              </a>
             </div>
           </div>
         )}
