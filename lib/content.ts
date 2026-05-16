@@ -247,11 +247,11 @@ export const credentials = [
 ];
 
 export const gastronomieClients = [
-  { name: "Walk'sches Haus", place: 'Weingarten', kind: 'Restaurant & Romantikhotel' },
-  { name: 'Ristorante Cala Gonone', place: 'Weingarten', kind: 'Ristorante' },
-  { name: 'Hotel Ritter', place: 'Bruchsal', kind: 'Hotel & Restaurant' },
-  { name: 'Hotel Scheffelhöhe', place: 'Bruchsal', kind: 'Hotel' },
-  { name: 'Schloss Eberstein', place: 'Gernsbach', kind: 'Hotel & Restaurant' },
+  { name: "Walk'sches Haus", place: 'Weingarten', kind: 'Restaurant & Romantikhotel', url: 'http://www.walksches-haus.de' },
+  { name: 'Ristorante Cala Gonone', place: 'Weingarten', kind: 'Ristorante', url: 'http://www.ristorante-calagonone.de' },
+  { name: 'Hotel Ritter', place: 'Bruchsal', kind: 'Hotel & Restaurant', url: 'http://www.ritterbruchsal.de' },
+  { name: 'Hotel Scheffelhöhe', place: 'Bruchsal', kind: 'Hotel', url: 'http://www.scheffelhoehe.de' },
+  { name: 'Schloss Eberstein', place: 'Gernsbach', kind: 'Hotel & Restaurant', url: 'http://www.schlosseberstein.com' },
 ];
 
 export const aktionstage = [

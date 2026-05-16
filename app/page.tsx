@@ -169,14 +169,31 @@ export default function MinimalHome() {
           </h2>
           <ul className="space-y-3">
             {gastronomieClients.map((c) => (
-              <li key={c.name} className="bg-[#eef0e6] rounded-xl px-5 py-4 flex flex-wrap items-baseline justify-between gap-3">
-                <div>
-                  <div className="font-newsreader text-[20px] text-[#2a2a26]">{c.name}</div>
-                  <div className="text-[12px] text-[#2a2a26]/60">{c.kind}</div>
-                </div>
-                <div className="text-[12px] tracking-[0.18em] uppercase text-[#5b6f54]">
-                  {c.place}
-                </div>
+              <li key={c.name}>
+                <a
+                  href={c.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group block bg-[#eef0e6] hover:bg-[#5b6f54] rounded-xl px-5 py-4 flex flex-wrap items-baseline justify-between gap-3 transition-colors duration-300 hover:-translate-y-px hover:shadow-[0_10px_30px_-15px_rgba(91,111,84,0.6)]"
+                >
+                  <div className="min-w-0">
+                    <div className="font-newsreader text-[20px] text-[#2a2a26] group-hover:text-[#faf7f2] transition-colors flex items-baseline gap-2">
+                      <span>{c.name}</span>
+                      <span
+                        aria-hidden
+                        className="text-[#94a888] group-hover:text-[#c5d0b8] opacity-0 -translate-x-1 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300"
+                      >
+                        ↗
+                      </span>
+                    </div>
+                    <div className="text-[12px] text-[#2a2a26]/60 group-hover:text-[#faf7f2]/70 transition-colors">
+                      {c.kind}
+                    </div>
+                  </div>
+                  <div className="text-[12px] tracking-[0.18em] uppercase text-[#5b6f54] group-hover:text-[#c5d0b8] transition-colors">
+                    {c.place}
+                  </div>
+                </a>
               </li>
             ))}
           </ul>
